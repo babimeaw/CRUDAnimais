@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Animais
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <ion-list *ngFor="let animal of lista;">
+    <ion-item (click)= "irParaEditar(animal)">
+      <ion-label>{{animal.nome}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="tertiary" (click)="irParaRegistrar()">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
